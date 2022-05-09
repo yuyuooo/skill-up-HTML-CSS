@@ -1,0 +1,298 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+
+h2::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%; /* 位置調整 */
+	transform: translate(-50%); /* 位置調整 */
+	bottom: -8px; /* 下線の上下位置調整 */
+	width: 70px; /* 下線の幅 */
+	height: 3px; /* 下線の太さ */
+	background-color: #EC715F; /* 下線の色 */
+}
+
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+i {
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+
+header {
+  background-color: #EC715F;
+  color: white;
+  width: 100%;
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header-image img {
+  height: 70px;
+  width: auto;
+}
+
+.header-nav ul {
+  display: flex;
+}
+
+.header-nav li {
+  margin: 0 30px;
+  list-style: none;
+}
+
+.main-image {
+  background-image: url(img/mv.png);
+  background-size: cover;
+  max-width: 1920px;
+  height: 650px;
+  position: relative;
+}
+
+main {
+  height: 100%;
+}
+
+.main {
+  color: white;
+  position: absolute;
+  top: 300px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.main h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.main-image p {
+  font-size: 20px;
+}
+
+
+.container {
+  background-color: #eceff1;
+  width: 100%;
+  position: relative;
+  height: 900px;
+}
+
+.portfolio {
+  position: absolute;
+  width: 920px;
+  text-align: center;
+  top: 90px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.portfolio-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.portfolio-container li:nth-child(1),
+.portfolio-container li:nth-child(2),
+.portfolio-container li:nth-child(4),
+.portfolio-container li:nth-child(5) {
+  margin-right: 10px;
+}
+
+.portfolio-container li:nth-child(1),
+.portfolio-container li:nth-child(2) {
+  margin-bottom: 5px;
+}
+
+.portfolio-image img {
+  width: 300px;
+  height: 250px;
+}
+
+
+.feature-container {
+  position: relative;
+  height: 700px;
+}
+
+.feature {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.feature-text ul {
+  display: flex;
+  justify-content:center;
+  list-style: none;
+}
+.feature-text i {
+  font-size: 60px;
+}
+
+.feature-text h3 {
+  margin: 20px 0;
+}
+
+.feature-image {
+  text-align: center;
+  width: 320px;
+  height: auto;
+  margin: 20px;
+}
+
+.feature-image p {
+  text-align: left;
+}
+
+
+.profile-container {
+  position: relative;
+  height: 700px;
+  background-color: #eceff1;
+  display: flex;
+}
+
+.profile {
+  top: 90px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+
+.profile-content {
+  display: flex;
+}
+
+
+.profile-text {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.profile-text ul {
+  list-style: none;
+}
+
+
+.profile-image img {
+  border-radius: 50%;
+}
+
+
+.contact-container {
+  position: relative;
+  height: 500px;
+}
+
+.contact {
+  position: absolute;
+  top: 90px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box ul {
+  list-style: none;
+  margin-right: 100px;
+}
+
+.contact-content {
+  text-align: left;
+}
+
+
+.contact-form {
+  text-align: left;
+}
+
+
+footer {
+
+  width: 100%;
+  line-height: 60px;
+  background-color: #EC715F;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 90%;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 32px;;
+  }
+
+  .main-image {
+    background-image: url(img/code.png);
+    background-size: cover;
+    height: 650px;
+    position: relative;
+  }
+
+  .main h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+ }
+
+
