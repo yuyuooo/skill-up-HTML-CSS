@@ -2,9 +2,9 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d6736d4411.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d6736d4411.js" crossorigin="anonymous"></script></script>
+    <link rel="stylesheet" href="style.css">
     <title>成果物</title>
   </head>
   <body>
@@ -14,16 +14,22 @@
           <a href="#head-image">
           <img src="img/logo.png"></a>
         </div>
-        <div class="header-nav">
-          <nav>
-            <ul>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#feature">Feature</a></li>
-              <li><a href="#profile">Profile</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
+        <div class="hamburger-menu">
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+         <input id="drawer_input" class="drawer_hidden" type="checkbox">
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer_input" class="drawer_open"><span></span></label>
+            <div class="header-nav">
+              <nav>
+                <ul>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#feature">Feature</a></li>
+                  <li><a href="#profile">Profile</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+      </div>
       </div>
     </header>
     <main>

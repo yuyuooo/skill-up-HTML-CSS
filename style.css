@@ -14,6 +14,7 @@ h2 {
   font-size: 32px;
   margin-bottom: 30px;
   position: relative;
+  text-align: center;
 }
 
 
@@ -43,6 +44,8 @@ i {
   font-size: 50px;
   margin-left: 20px;
 }
+
+
 
 
 header {
@@ -116,16 +119,16 @@ main {
 
 .portfolio {
   position: absolute;
-  width: 920px;
-  text-align: center;
   top: 90px;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .portfolio-container ul {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   list-style: none;
 }
@@ -268,31 +271,171 @@ footer {
   margin-bottom: 0px;
 }
 
-@media screen and (max-width: 480px) {
-  body {
-    width: 90%;
-  }
+@media screen and (max-width: 425px) {
+  /* ここから下がハンバーガーメニューに関するCSS */
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: white;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.header-nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #EC715F;
+  transition: .5s;
+}
+
+/* メニュー黒ポチを消す */
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .header-nav {
+  left: 0;/* メニューを画面に入れる */
+}
+
+/*チェックボックスのチェックを外す*/
+$(function() {
+  $('.drawer-item>a').click(function() {
+    $('#drawer-check').removeAttr('checked').prop('checked', false).change();
+  });
+});
 
   p {
     font-size: 16px;
   }
 
+
   h2 {
     font-size: 32px;;
   }
+
+
+  header,profile-container {
+    width:  100%;
+  }
+
+  main {
+    height: 5800px;
+  }
+
+  .header-container, .portfolio, .profile,.feature,.contact {
+    width: 90%;
+  }
+
+
+  .feature-container {
+    height: 1600px;
+  }
+
+
 
   .main-image {
     background-image: url(img/code.png);
     background-size: cover;
     height: 650px;
     position: relative;
+    width: 100%;
   }
 
   .main h1 {
     font-size: 40px;
     margin-bottom: 10px;
   }
-  
+
+  .container {
+    width: 100%;
+    height: 1900px;
+  }
+
+  .portfolio-container ul,.feature-text ul,.profile-content,.contact-box {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+  }
+
+  .profile-container {
+    height: 1000px;
+  }
+
+
+  .profile-text, .portfolio-container li {
+    text-align: center;
+    margin: 0;
+  }
+
+    .contact-form, .contact-text,.contact-box ul {
+      text-align: center;
+      margin: 0;
+    }
+
+
+  footer {
+    width: 100%;
+  }
+
  }
+
 
 
